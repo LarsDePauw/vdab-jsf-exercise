@@ -1,9 +1,12 @@
 package be.vdab.domain;
 
+import jdk.nashorn.internal.objects.NativeDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class User {
@@ -17,9 +20,6 @@ public class User {
 
     private String birthDate;
 
-    /**
-     * Used by JPA.
-     */
     protected User() {
     }
 
@@ -59,5 +59,13 @@ public class User {
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String toString() {
+        return "user " + firstName + " " + lastName + " is born on " + birthDate;
+    }
+
+    public String fullName(){
+        return firstName + " " + lastName;
     }
 }
