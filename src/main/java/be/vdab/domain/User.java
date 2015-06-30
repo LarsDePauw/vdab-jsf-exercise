@@ -2,6 +2,7 @@ package be.vdab.domain;
 
 import jdk.nashorn.internal.objects.NativeDate;
 
+import javax.inject.Named;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -91,7 +92,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    protected User() {
+    public User() {
     }
 
 

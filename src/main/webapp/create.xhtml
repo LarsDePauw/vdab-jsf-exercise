@@ -28,39 +28,39 @@
 
         <h:form>
             <div class="form-group">First Name:
-                <h:inputText id="firstName" value="#{user.firstName}"/>
+                <h:inputText id="firstName" value="#{userController.user.firstName}"/>
             </div>
 
             <div class="form-group">
                 Last Name:
-                <h:inputText id="lastName" value="#{user.lastName}"/>
+                <h:inputText id="lastName" value="#{userController.user.lastName}"/>
             </div>
 
             <div class="form-group">
                 E-mail address:
-                <h:inputText id="email" value="#{user.email}"/>
+                <h:inputText id="email" value="#{userController.user.email}"/>
             </div>
 
             <div class="form-group">
                 Phone number:
-                <h:inputText id="phoneNumber" value="#{user.phoneNumber}"/>
+                <h:inputText id="phoneNumber" value="#{userController.user.phoneNumber}"/>
             </div>
 
             <div class="form-group">
                 Birthdate:
-                <h:inputText id="birthDate" value="#{user.birthDate}"/>
+                <h:inputText id="birthDate" value="#{userController.user.birthDate}"/>
             </div>
 
             <div class="form-group">
 
                 <div class="form-group">
-                    <h:selectOneRadio value="#{user.gender}">
+                    <h:selectOneRadio value="#{userController.user.gender}">
                         <f:selectItem itemLabel="Male" itemValue="male"/>
                         <f:selectItem itemLabel="Female" itemValue="female"/>
                     </h:selectOneRadio>
                 </div>
 
-                <h:commandButton value="Submit data!" action="#{userController.saveUser(user)}"/>
+                <h:commandButton value="Submit data!" action="#{userController.saveUser()}"/>
             </div>
         </h:form>
 
