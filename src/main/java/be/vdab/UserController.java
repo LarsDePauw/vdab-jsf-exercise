@@ -16,6 +16,9 @@ public class UserController {
 
     public User getUserById(int id) {
         return userRepository.findUserById(id);
+    }
 
+    public void saveUser(User user){
+        userRepository.addUser(user);
     }
 }
