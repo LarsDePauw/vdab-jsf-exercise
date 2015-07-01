@@ -48,7 +48,10 @@
 
             <div class="form-group">
                 Birthdate:<br/>
-                <h:inputText id="birthDate" value="#{userController.user.birthDate}"/>
+                <h:inputText id="birthDate" value="#{userController.user.birthDate}">
+                    <f:convertDateTime  pattern="yyyy-M-dd"/>
+                </h:inputText>
+                <h:message class ="btn btn-danger" for="birthDate">This is not the correct format. Try YYYY-MM-DD</h:message>
             </div>
 
             <div class="form-group">

@@ -19,7 +19,7 @@ public class UserRepository {
         return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
-    public User findById(int id) {
+    public User findUserById(int id) {
         return entityManager.find(User.class, id);
     }
 
@@ -31,7 +31,7 @@ public class UserRepository {
         entityManager.remove(entityManager.getReference(User.class, id));
     }
 
-    public void deleteUser(User user){
-        entityManager.remove(user);
+    public void addUser(User user) {
+        entityManager.merge(user);
     }
 }

@@ -44,6 +44,7 @@
             <h:column>
                 <f:facet name="header">Birth date</f:facet>
                 <h:outputText value="#{user.birthDate}">
+                    <f:convertDateTime dateStyle="full" pattern="Y-MM-dd"/>
                 </h:outputText>
             </h:column>
 
@@ -59,12 +60,12 @@
                 <h:panelGroup>
 
                     <h:link outcome="user" class="btn btn-success">
-                        <span class="glyphicon glyphicon-list"></span> details
+                        details <span class="glyphicon glyphicon-list"></span>
                         <f:param name="id" value="#{user.id}"/>
                     </h:link>
                     <h:form>
-                        <h:commandLink value="delete" action="#{userController.deleteUser(user.id)}">
-                        <span class="glyphicon glyphicon-list"></span></h:commandLink>
+                        <h:commandLink value="delete" action="#{userRepository.remove(user.id)}" styleClass="btn btn-danger">
+                        <span class="glyphicon glyphicon-thumbs-down"></span></h:commandLink>
                     </h:form>
 
 
