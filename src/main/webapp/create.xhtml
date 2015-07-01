@@ -54,9 +54,8 @@
             <div class="form-group">
 
                 <div class="form-group">
-                    <h:selectOneRadio value="#{userController.user.gender}">
+                    <h:selectOneRadio value="#{userController.user.gender}" layout="pageDirection" styleClass="radio-button-group">
                         <f:selectItem itemLabel="Male" itemValue="male"/>
-                        &nbsp; &nbsp;
                         <f:selectItem itemLabel="Female" itemValue="female"/>
                     </h:selectOneRadio>
                 </div>
