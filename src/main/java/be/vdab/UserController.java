@@ -26,7 +26,8 @@ public class UserController {
         return userRepository.findUserById(id);
     }
 
-    public void saveUser(){
+    public String saveUser(){
         userRepository.addUser(user);
+        return "table";
     }
 }

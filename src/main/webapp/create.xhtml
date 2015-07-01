@@ -27,27 +27,27 @@
         <h1>Create a user</h1>
 
         <h:form>
-            <div class="form-group">First Name:
+            <div class="form-group">First Name:<br/>
                 <h:inputText id="firstName" value="#{userController.user.firstName}"/>
             </div>
 
             <div class="form-group">
-                Last Name:
+                Last Name:<br/>
                 <h:inputText id="lastName" value="#{userController.user.lastName}"/>
             </div>
 
             <div class="form-group">
-                E-mail address:
+                E-mail address:<br/>
                 <h:inputText id="email" value="#{userController.user.email}"/>
             </div>
 
             <div class="form-group">
-                Phone number:
+                Phone number:<br/>
                 <h:inputText id="phoneNumber" value="#{userController.user.phoneNumber}"/>
             </div>
 
             <div class="form-group">
-                Birthdate:
+                Birthdate:<br/>
                 <h:inputText id="birthDate" value="#{userController.user.birthDate}"/>
             </div>
 
@@ -56,14 +56,21 @@
                 <div class="form-group">
                     <h:selectOneRadio value="#{userController.user.gender}">
                         <f:selectItem itemLabel="Male" itemValue="male"/>
+                        &nbsp; &nbsp;
                         <f:selectItem itemLabel="Female" itemValue="female"/>
                     </h:selectOneRadio>
                 </div>
 
-                <h:commandButton value="Submit data!" action="#{userController.saveUser()}"/>
+                <a href="http://localhost:8080/fortune/table.faces">
+                    <h:commandButton class="btn btn-primary" value="Submit data!"
+                                     action="#{userController.saveUser()}"/>
+                </a>
             </div>
         </h:form>
 
+        <div>
+            <a href="http://localhost:8080/fortune/table.faces">All users</a>
+        </div>
     </div>
 
 
