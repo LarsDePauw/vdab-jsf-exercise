@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class User {
     @Id
@@ -22,6 +21,7 @@ public class User {
     private String birthDate;
 
     private String gender;
+
 
     private String email;
 

@@ -48,20 +48,37 @@
             </h:column>
 
             <h:column>
-                <f:facet name="header">Cellphone Number (optional, because, you know, cellphones might not have been invented back then)</f:facet>
+                <f:facet name="header">Cellphone Number (optional)</f:facet>
                 <h:outputText value="#{user.phoneNumber}">
                 </h:outputText>
             </h:column>
 
 
+            <h:column>
+                <f:facet name="header">Settings and details</f:facet>
+                <h:panelGroup>
+
+                    <h:link outcome="user" class="btn btn-success">
+                        <span class="glyphicon glyphicon-list"></span> details
+                        <f:param name="id" value="#{user.id}"/>
+                    </h:link>
+                    <h:form>
+                        <h:commandLink value="delete" action="#{userController.deleteUser(user.id)}">
+                        <span class="glyphicon glyphicon-list"></span></h:commandLink>
+                    </h:form>
+
+
+
+                </h:panelGroup>
+            </h:column>
 
         </h:dataTable>
 
         <div>
-            <a href="create.faces">Create new user</a>
+            <a href="create.faces" class="btn btn-primary">Create new user</a>
         </div>
-
     </div>
+
 
 </h:body>
 

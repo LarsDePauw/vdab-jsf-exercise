@@ -30,4 +30,9 @@ public class UserController {
         userRepository.addUser(user);
         return "table";
     }
+
+    public void deleteUser(int id){
+        User user = userRepository.findUserById(id);
+        userRepository.deleteUser(user);
+    }
 }
